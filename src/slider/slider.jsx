@@ -1,9 +1,12 @@
 import React, { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper.scss";
+import { SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
 import { Image } from "/src/elements";
 import { SliderWrapper, StyledButton, StyledSlider } from "./styled";
+import 'swiper/scss/navigation';
+import 'swiper/scss/a11y';
+import 'swiper/scss';
+import 'swiper/scss/pagination';
 
 function Slider({ images }) {
   SwiperCore.use([Navigation]);
