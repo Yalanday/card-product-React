@@ -13,4 +13,9 @@ export const Nav = styled.nav`
   margin-bottom: ${(props) => props.theme.indent};
   background-color: ${(props) => props.theme.buttonColor};
   color: ${(props) => props.theme.textColor};
-`;
+
+  a {
+    margin-right: 30px;
+  }
+
+  `;

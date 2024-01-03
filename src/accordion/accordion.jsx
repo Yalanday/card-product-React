@@ -1,4 +1,4 @@
-import react, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Content, TitleButton, Wrapper, ContentWrapper } from "./styled";
 
 function Accordion({ items }) {
