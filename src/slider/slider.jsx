@@ -8,13 +8,13 @@ import 'swiper/scss/a11y';
 import 'swiper/scss';
 import 'swiper/scss/pagination';
 
-function Slider({ images }) {
+function Slider({ images, width = 200, height = 257 }) {
   SwiperCore.use([Navigation]);
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
 
   return (
-    <SliderWrapper>
+    <SliderWrapper width={width}>
       <StyledButton left ref={navigationPrevRef} title="Назад">
         &lt;
       </StyledButton>
@@ -22,6 +22,8 @@ function Slider({ images }) {
         &gt;
       </StyledButton>
       <StyledSlider
+        width={width}
+        height={height}
         onBeforeInit={(swiper) => {
           swiper.params.navigation.prevEl = navigationPrevRef.current;
           swiper.params.navigation.nextEl = navigationNextRef.current;
@@ -43,9 +45,8 @@ function Slider({ images }) {
               <Image
                 src={image}
                 alt="изображение продукта"
-                width="200"
-                height="257"
-                maxWidth="200"
+                height={height}
+                maxWidth={width}
               />
             </SwiperSlide>
           ))}

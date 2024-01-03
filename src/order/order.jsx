@@ -1,4 +1,4 @@
-import react, { useState } from "react";
+import React, { useState } from "react";
 import Button from "/src/button/button";
 import { Label } from "./styled";
 
